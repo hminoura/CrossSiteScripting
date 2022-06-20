@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script>
+      function foo(x) { return (x < 10) ? '0' + x : x; }
+      function clock() {
+	  var now = new Date();
+	  var h = now.getHours();
+	  var m = now.getMinutes();
+	  var s = now.getSeconds();
+	  var t = foo(h) + ':' + foo(m) + ':' + foo(s);
+	  document.getElementById('clockspan').textContent = t;
+      }
+      setInterval(clock, 1000);
+      window.onload = clock;
+    </script>
+  </head>
+  
+  <body>
+    <p><span id="clockspan"></span></p>
+
+    <script>
+      alert("すべてのファイルを暗号化しました．解除方法を知りたければ，10分以内に090-1234-5678に連絡を．")
+    </script>
+
+
+  </body>
+</html>
